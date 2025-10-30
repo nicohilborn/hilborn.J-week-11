@@ -1,25 +1,22 @@
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
   background-color: #0b0b0b;
   color: #f9f4e7;
   margin: 0;
   overflow-x: hidden;
 }
-
 h1,
 h2,
 p {
   margin: 0;
 }
-
 header.hero {
   text-align: center;
   padding: 3rem 1rem;
   background: linear-gradient(180deg, #1a1a1a, #0b0b0b);
-  color: #ff7518;
-  animation: flicker 2.5s infinite ease-in-out;
+  color: #ff6600;
+  animation: flicker 3s infinite ease-in-out;
 }
-
 @keyframes flicker {
   0%,
   18%,
@@ -36,63 +33,59 @@ header.hero {
     opacity: 0.7;
   }
 }
-
 main {
   max-width: 1000px;
   margin: 3rem auto;
   padding: 2rem;
 }
-
 footer {
   text-align: center;
   padding: 2rem;
   color: #999;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
-
-/* ==== Cards Section ==== */
 .haunted-gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
 }
-
 .card {
   background-color: #1c1c1c;
-  border: 2px solid #ff7518;
+  border: 2px solid #ff6600;
   border-radius: 12px;
   width: 250px;
   height: 300px;
   text-align: center;
   padding: 1rem;
   box-shadow: 0 0 15px rgba(255, 117, 24, 0.3);
-  transition: transform 0.4s ease, box-shadow 0.4s ease,
-    background-color 0.4s ease;
+  transition: transform 1s ease, box-shadow 1s ease,
+    background-color 1s ease;
 }
-
 .card img {
   width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 0.5rem;
 }
-
-/* Hover Transition (required) */
-.card:hover {
+.card.pumpkin:hover {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 0 30px rgba(255, 102, 0, 0.8);
+  background-color: #2a2a2a;
+}
+.card.ghosty:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 117, 24, 0.8);
+  background-color: #2a2a2a;
+}
+.card.skelly:hover {
   transform: scale(1.1) rotate(-2deg);
   box-shadow: 0 0 30px rgba(255, 117, 24, 0.8);
   background-color: #2a2a2a;
 }
-
-/* ==== Individual Animations ==== */
-
-/* Floating Ghost (keyframe animation) */
-.ghost img {
-  animation: floaty 4s ease-in-out infinite;
+.ghosty img {
+  animation: floaty 5s ease-in-out infinite;
 }
-
 @keyframes floaty {
   0%,
   100% {
@@ -102,10 +95,8 @@ footer {
     transform: translateY(-20px);
   }
 }
-
-/* Flickering Lantern */
-.lantern img {
-  animation: flickerLight 1.5s infinite ease-in-out;
+.skelly img {
+  animation: rattle 1s infinite ease-in-out;
 }
 
 @keyframes flickerLight {
@@ -115,34 +106,30 @@ footer {
     filter: brightness(1);
   }
   50% {
-    opacity: 0.7;
+    opacity: 1;
     filter: brightness(1.4);
   }
 }
-
-/* Glowing Pumpkin on Hover */
 .pumpkin:hover {
   box-shadow: 0 0 40px 10px rgba(255, 117, 24, 0.9);
 }
-
-/* ==== Button Section ==== */
 .cta {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 .btn {
-  background-color: #ff7518;
+  background-color: #ff6600;
   color: #0b0b0b;
   padding: 1rem 2rem;
   font-size: 1.2rem;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 1s ease, box-shadow 1s ease;
 }
 
 .btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(255, 117, 24, 0.9);
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.9);
 }
