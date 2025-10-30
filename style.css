@@ -12,36 +12,20 @@ p {
 }
 header.hero {
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   background: linear-gradient(180deg, #1a1a1a, #0b0b0b);
   color: #ff6600;
   animation: flicker 3s infinite ease-in-out;
 }
-@keyframes flicker {
-  0%,
-  18%,
-  22%,
-  25%,
-  53%,
-  57%,
-  100% {
-    opacity: 1;
-  }
-  20%,
-  24%,
-  55% {
-    opacity: 0.7;
-  }
-}
 main {
-  max-width: 1000px;
+  max-width: 1500px;
   margin: 3rem auto;
   padding: 2rem;
 }
 footer {
   text-align: center;
   padding: 2rem;
-  color: #999;
+  color: #a80000;
   font-size: 1rem;
 }
 .haunted-gallery {
@@ -60,7 +44,7 @@ footer {
   padding: 1rem;
   box-shadow: 0 0 15px rgba(255, 117, 24, 0.3);
   transition: transform 1s ease, box-shadow 1s ease,
-    background-color 1s ease;
+  background-color 1s ease;
 }
 .card img {
   width: 100%;
@@ -98,18 +82,6 @@ footer {
 .skelly img {
   animation: rattle 1s infinite ease-in-out;
 }
-
-@keyframes flickerLight {
-  0%,
-  100% {
-    opacity: 1;
-    filter: brightness(1);
-  }
-  50% {
-    opacity: 1;
-    filter: brightness(1.4);
-  }
-}
 .pumpkin:hover {
   box-shadow: 0 0 40px 10px rgba(255, 117, 24, 0.9);
 }
@@ -117,7 +89,6 @@ footer {
   text-align: center;
   margin-top: 5rem;
 }
-
 .btn {
   background-color: #ff6600;
   color: #0b0b0b;
@@ -128,7 +99,6 @@ footer {
   cursor: pointer;
   transition: transform 1s ease, box-shadow 1s ease;
 }
-
 .btn:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px rgba(255, 102, 0, 0.9);
